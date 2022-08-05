@@ -76,7 +76,7 @@ public class Main {
     public static int nextInt() throws IOException { in.nextToken(); return (int)in.nval; }
     public static String next() throws IOException { return in.sval; }
     public static long nextLong() throws Exception { in.nextToken(); return (long)in.nval;}
-    
+    
     // 使用示例
     public static void main(String[] args) throws Exception {
         int n = nextInt();
@@ -113,9 +113,9 @@ class Main {
     static PrintWriter out = new PrintWriter(System.out);
     public static void main(String[] args) {
         BigInteger a = new BigInteger("12345678910");  // 将字符串以十进制的形式创建 BigInteger 对象
-        out.println(a);  // a 的值为 12345678910 
+        out.println(a);  // a 的值为 12345678910 
         BigInteger b = new BigInteger("1E", 16);  // 将字符串以指定进制的形式创建 BigInteger 对象
-        out.println(b);  // c 的值为 30 
+        out.println(b);  // c 的值为 30 
         out.close();
     }
 }
@@ -165,162 +165,162 @@ public class Main {
     static void abs() {
         out.println("abs:");
         a = new BigInteger("-123");
-        out.println(a.abs());  // 输出 123 
+        out.println(a.abs());  // 输出 123 
         a = new BigInteger("123");
-        out.println(a.abs());  // 输出 123 
+        out.println(a.abs());  // 输出 123 
     }
 
     static void negate() {
         out.println("negate:");
         a = new BigInteger("-123");
-        out.println(a.negate());  // 输出 123 
+        out.println(a.negate());  // 输出 123 
         a = new BigInteger("123");
-        out.println(a.negate());  // 输出 -123 
+        out.println(a.negate());  // 输出 -123 
     }
 
     static void add() {
         out.println("add:");
         a = new BigInteger("123");
         b = new BigInteger("123");
-        out.println(a.add(b));  // 输出 246 
+        out.println(a.add(b));  // 输出 246 
     }
 
     static void subtract() {
         out.println("subtract:");
         a = new BigInteger("123");
         b = new BigInteger("123");
-        out.println(a.subtract(b));  // 输出 0 
+        out.println(a.subtract(b));  // 输出 0 
     }
 
     static void multiply() {
         out.println("multiply:");
         a = new BigInteger("12");
         b = new BigInteger("12");
-        out.println(a.multiply(b));  // 输出 144 
+        out.println(a.multiply(b));  // 输出 144 
     }
 
     static void divide() {
         out.println("divide:");
         a = new BigInteger("12");
         b = new BigInteger("11");
-        out.println(a.divide(b));  // 输出 1 
+        out.println(a.divide(b));  // 输出 1 
     }
 
     static void remainder() {
         out.println("remainder:");
         a = new BigInteger("12");
         b = new BigInteger("10");
-        out.println(a.remainder(b));  // 输出 2 
+        out.println(a.remainder(b));  // 输出 2 
         a = new BigInteger("-12");
         b = new BigInteger("10");
-        out.println(a.remainder(b));  // 输出 -2 
+        out.println(a.remainder(b));  // 输出 -2 
     }
 
     static void mod() {
         out.println("mod:");
         a = new BigInteger("12");
         b = new BigInteger("10");
-        out.println(a.mod(b));  // 输出 2 
+        out.println(a.mod(b));  // 输出 2 
         a = new BigInteger("-12");
         b = new BigInteger("10");
-        out.println(a.mod(b));  // 输出 8 
+        out.println(a.mod(b));  // 输出 8 
     }
 
     static void pow() {
         out.println("pow:");
         a = new BigInteger("2");
-        out.println(a.pow(10));  // 输出 1024 
+        out.println(a.pow(10));  // 输出 1024 
     }
 
     static void and() {
         out.println("and:");
-        a = new BigInteger("3");  // 11 
-        b = new BigInteger("5");  // 101 
-        out.println(a.and(b));  // 输出 1 
+        a = new BigInteger("3");  // 11 
+        b = new BigInteger("5");  // 101 
+        out.println(a.and(b));  // 输出 1 
     }
 
     static void or() {
         out.println("or:");
-        a = new BigInteger("2");  // 10 
-        b = new BigInteger("5");  // 101 
-        out.println(a.or(b));  // 输出 7 
+        a = new BigInteger("2");  // 10 
+        b = new BigInteger("5");  // 101 
+        out.println(a.or(b));  // 输出 7 
     }
 
     static void not() {
         out.println("not:");
-        a = new BigInteger("2147483647");  // 01111111 11111111 11111111 11111111 
-        out.println(a.not());  // 输出 -2147483648 二进制为：10000000 00000000 00000000 00000000 
+        a = new BigInteger("2147483647");  // 01111111 11111111 11111111 11111111 
+        out.println(a.not());  // 输出 -2147483648 二进制为：10000000 00000000 00000000 00000000 
     }
 
     static void xor() {
         out.println("xor:");
-        a = new BigInteger("6");  // 110 
-        b = new BigInteger("5");  // 101 
-        out.println(a.xor(b));  // 011 输出 3 
+        a = new BigInteger("6");  // 110 
+        b = new BigInteger("5");  // 101 
+        out.println(a.xor(b));  // 011 输出 3 
     }
 
     static void shiftLeft() {
         out.println("shiftLeft:");
         a = new BigInteger("1");
-        out.println(a.shiftLeft(10));  // 输出 1024 
+        out.println(a.shiftLeft(10));  // 输出 1024 
     }
 
     static void shiftRight() {
         out.println("shiftRight:");
         a = new BigInteger("1024");
-        out.println(a.shiftRight(8));  // 输出 4 
+        out.println(a.shiftRight(8));  // 输出 4 
     }
 
     static void max() {
         out.println("max:");
         a = new BigInteger("6");
         b = new BigInteger("5");
-        out.println(a.max(b));  // 输出 6 
+        out.println(a.max(b));  // 输出 6 
     }
 
     static void min() {
         out.println("min:");
         a = new BigInteger("6");
         b = new BigInteger("5");
-        out.println(a.min(b));  // 输出 5 
+        out.println(a.min(b));  // 输出 5 
     }
 
     static void bitCount() {
         out.println("bitCount:");
-        a = new BigInteger("6");  // 110 
-        out.println(a.bitCount());  // 输出 2 
+        a = new BigInteger("6");  // 110 
+        out.println(a.bitCount());  // 输出 2 
     }
 
     static void bitLength() {
         out.println("bitLength:");
-        a = new BigInteger("6");  // 110 
-        out.println(a.bitLength());  // 输出 3 
+        a = new BigInteger("6");  // 110 
+        out.println(a.bitLength());  // 输出 3 
     }
 
     static void getLowestSetBit() {
         out.println("getLowestSetBit:");
-        a = new BigInteger("8");  // 1000 
-        out.println(a.getLowestSetBit());  // 输出 3 
+        a = new BigInteger("8");  // 1000 
+        out.println(a.getLowestSetBit());  // 输出 3 
     }
 
     static void compareTo() {
         out.println("compareTo:");
         a = new BigInteger("8");
         b = new BigInteger("9");
-        out.println(a.compareTo(b));  // 输出 -1 
+        out.println(a.compareTo(b));  // 输出 -1 
         a = new BigInteger("8");
         b = new BigInteger("8");
-        out.println(a.compareTo(b));  // 输出 0 
+        out.println(a.compareTo(b));  // 输出 0 
         a = new BigInteger("8");
         b = new BigInteger("7");
-        out.println(a.compareTo(b));  // 输出 1 
+        out.println(a.compareTo(b));  // 输出 1 
     }
 
     static void toStringTest() {
         out.println("toString:");
         a = new BigInteger("15");
-        out.println(a.toString());  // 输出 15 
-        out.println(a.toString(16));  // 输出 f 
+        out.println(a.toString());  // 输出 15 
+        out.println(a.toString(16));  // 输出 f 
     }
 
     public static void main(String[] args) {
@@ -373,36 +373,36 @@ public class Main {
     static PrintWriter out = new PrintWriter(System.out);
     static BigInteger a, b, p;
 
-    static void gcd() {  // 最大公约数 
+    static void gcd() {  // 最大公约数 
         a = new BigInteger("120032414321432144212100");
         b = new BigInteger("240231431243123412432140");
-        out.println(String.format("gcd(%s,%s)=%s", a.toString(), b.toString(), a.gcd(b).toString()));  // gcd(120032414321432144212100,240231431243123412432140)=20 
+        out.println(String.format("gcd(%s,%s)=%s", a.toString(), b.toString(), a.gcd(b).toString()));  // gcd(120032414321432144212100,240231431243123412432140)=20 
     }
 
-    static void isPrime() {  // 基于米勒罗宾判定该数是否是素数，参数越大准确性越高，复杂度越高。准确性为 (1-1/(val*2)) 
+    static void isPrime() {  // 基于米勒罗宾判定该数是否是素数，参数越大准确性越高，复杂度越高。准确性为 (1-1/(val*2)) 
         a = new BigInteger("1200324143214321442127");
         out.println("a:" + a.toString());
-        out.println(a.isProbablePrime(10) ? "a is prime" : "a is not prime");  // a is not prime 
+        out.println(a.isProbablePrime(10) ? "a is prime" : "a is not prime");  // a is not prime 
     }
 
-    static void nextPrime() {  // 找出该数的下一个素数 
+    static void nextPrime() {  // 找出该数的下一个素数 
         a = new BigInteger("1200324143214321442127");
         out.println("a:" + a.toString());
-        out.println(String.format("a nextPrime is %s", a.nextProbablePrime().toString()));  // a nextPrime is 1200324143214321442199 
+        out.println(String.format("a nextPrime is %s", a.nextProbablePrime().toString()));  // a nextPrime is 1200324143214321442199 
     }
 
-    static void modPow() {  // 快速幂，比正常版本要快，内部有蒙特卡洛优化 
+    static void modPow() {  // 快速幂，比正常版本要快，内部有蒙特卡洛优化 
         a = new BigInteger("2");
         b = new BigInteger("10");
         p = new BigInteger("1000");
         out.println(String.format("a:%s b:%s p:%s", a, b, p));
-        out.println(String.format("a^b mod p:%s", a.modPow(b, p).toString()));//  24 
+        out.println(String.format("a^b mod p:%s", a.modPow(b, p).toString()));//  24 
     }
 
-    static void modInverse() {  // 逆元 
+    static void modInverse() {  // 逆元 
         a = new BigInteger("10");
         b = new BigInteger("3");
-        out.println(a.modInverse(b));  // a ^ (p-2) mod p = 1 
+        out.println(a.modInverse(b));  // a ^ (p-2) mod p = 1 
     }
 
     public static void main(String[] args) {
@@ -788,8 +788,8 @@ public class Main {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        List<Integer> list1 = new LinkedList<>();  // 创建一个名字为 list1 的双链表 
-        List<Integer> list2 = new LinkedList<>(list1);  // 创建一个名字为 list2 的双链表，将 list1 内所有元素加入进来 
+        List<Integer> list1 = new LinkedList<>();  // 创建一个名字为 list1 的双链表 
+        List<Integer> list2 = new LinkedList<>(list1);  // 创建一个名字为 list2 的双链表，将 list1 内所有元素加入进来 
     }
 }
 ```
@@ -820,13 +820,13 @@ public class Main {
     static List<Integer> linked = new LinkedList<>();
 
     static void add() {
-        array.add(1);  // 时间复杂度为 O(1) 
-        linked.add(1);  // 时间复杂度为 O(1) 
+        array.add(1);  // 时间复杂度为 O(1) 
+        linked.add(1);  // 时间复杂度为 O(1) 
     }
 
     static void get() {
-        array.get(10);  // 时间复杂度为 O(1) 
-        linked.get(10);  // 时间复杂度为 O(11) 
+        array.get(10);  // 时间复杂度为 O(1) 
+        linked.get(10);  // 时间复杂度为 O(11) 
     }
 
     static void addIdx() {
@@ -860,7 +860,7 @@ public class Main {
     static PrintWriter out = new PrintWriter(System.out);
     static List<Integer> array = new ArrayList<>();
     static List<Integer> linked = new LinkedList<>();
-    
+    
     static void function1() {  // 朴素遍历
         for (int i = 0; i < array.size(); i++) {
             out.println(array.get(i));  // 遍历自增数组，复杂度为 O(n)
@@ -870,16 +870,16 @@ public class Main {
         }
     }
 
-    static void function2() {  // 增强 for 循环遍历 
+    static void function2() {  // 增强 for 循环遍历 
         for (int e : array) {
             out.println(e);
         }
         for (int e : linked) {
-            out.println(e);  // 复杂度均为 O(n) 
+            out.println(e);  // 复杂度均为 O(n) 
         }
     }
 
-    static void function3() {  // 迭代器遍历 
+    static void function3() {  // 迭代器遍历 
         Iterator<Integer> iterator1 = array.iterator();
         Iterator<Integer> iterator2 = linked.iterator();
         while (iterator1.hasNext()) {
@@ -887,7 +887,7 @@ public class Main {
         }
         while (iterator2.hasNext()) {
             out.println(iterator2.next());
-        }  // 复杂度均为 O(n) 
+        }  // 复杂度均为 O(n) 
     }
 
 }
@@ -895,7 +895,7 @@ public class Main {
 
 ???+ warning "注意"
   不要在 `for/foreach` 遍历 `List` 的过程中删除其中的元素，否则会抛出异常。
-  
+  
   原因也很简单，`list.size()` 改变了，但在循环中已循环的次数却是没有随之变化。原来预计在下一个 `index` 的数据因为删除的操作变成了当前 `index` 的数据，运行下一个循环时操作的会变为原来预计在下下个 `index` 的数据，最终会导致操作的数据不符合预期。
 
 ### Queue
@@ -949,29 +949,29 @@ public class Main {
     static Queue<Integer> q1 = new LinkedList<>();
     static Queue<Integer> q2 = new PriorityQueue<>();
 
-    static void add() {  // add 和 offer 功能上没有差距，区别是是否会抛出异常 
-        q1.add(1);  // 时间复杂度为 O(1) 
-        q2.add(1);  // 时间复杂度为 O(logn) 
+    static void add() {  // add 和 offer 功能上没有差距，区别是是否会抛出异常 
+        q1.add(1);  // 时间复杂度为 O(1) 
+        q2.add(1);  // 时间复杂度为 O(logn) 
     }
 
     static void isEmpty() {
-        q1.isEmpty();  // 时间复杂度为 O(1) 
-        q2.isEmpty();  // 空间复杂度为 O(1) 
+        q1.isEmpty();  // 时间复杂度为 O(1) 
+        q2.isEmpty();  // 空间复杂度为 O(1) 
     }
 
     static void size() {
-        q1.size();  // 时间复杂度为 O(1) 
-        q2.size();  // 返回 q2 的长度 
+        q1.size();  // 时间复杂度为 O(1) 
+        q2.size();  // 返回 q2 的长度 
     }
 
     static void peek() {
-        q1.peek();  // 时间复杂度为 O(1) 
-        q2.peek();  // 时间复杂度为 O(logn) 
+        q1.peek();  // 时间复杂度为 O(1) 
+        q2.peek();  // 时间复杂度为 O(logn) 
     }
 
     static void poll() {
-        q1.poll();  // 时间复杂度为 O(1) 
-        q2.poll();  // 时间复杂度为 O(logn) 
+        q1.poll();  // 时间复杂度为 O(1) 
+        q2.poll();  // 时间复杂度为 O(logn) 
     }
 }
 ```
@@ -990,10 +990,10 @@ public class Main {
     static Queue<Integer> q2 = new PriorityQueue<>();
 
     static void test() {
-        while (!q1.isEmpty()) {  // 复杂度为 O(n) 
+        while (!q1.isEmpty()) {  // 复杂度为 O(n) 
             out.println(q1.poll());
         }
-        while (!q2.isEmpty()) {  // 复杂度为 O(nlogn) 
+        while (!q2.isEmpty()) {  // 复杂度为 O(nlogn) 
             out.println(q2.poll());
         }
     }
@@ -1033,7 +1033,7 @@ Set<Integer> s2 = new LinkedHashSet<>();
 
 ```java
 Set<Integer> s3 = new TreeSet<>();
-Set<Integer> s4 = new TreeSet<>((x, y) -> {return y - x;});  // 降序 
+Set<Integer> s4 = new TreeSet<>((x, y) -> {return y - x;});  // 降序 
 ```
 
 #### 常用方法
@@ -1066,23 +1066,23 @@ public class Main {
         s1.add(1);
     }
 
-    static void contains() {  // 判断 set 中是否有元素值为 2，有则返回 true，否则返回 false 
+    static void contains() {  // 判断 set 中是否有元素值为 2，有则返回 true，否则返回 false 
         s1.contains(2);
     }
 
-    static void test1() {  // s1 与 s2 的并集 
+    static void test1() {  // s1 与 s2 的并集 
         Set<Integer> res = new HashSet<>();
         res.addAll(s1);
         res.addAll(s2);
     }
 
-    static void test2() {  // s1 与 s2 的交集 
+    static void test2() {  // s1 与 s2 的交集 
         Set<Integer> res = new HashSet<>();
         res.addAll(s1);
         res.retainAll(s2);
     }
 
-    static void test3() {  // 差集：s1 - s2 
+    static void test3() {  // 差集：s1 - s2 
         Set<Integer> res = new HashSet<>();
         res.addAll(s1);
         res.removeAll(s2);
@@ -1237,25 +1237,25 @@ public class Main {
     static int firstIdx, lastIdx;
 
     public static void main(String[] args) {
-        Arrays.sort(a);  // 1 
-        Arrays.sort(a, firstIdx, lastIdx);  // 2 
-        Arrays.sort(b, new Comparator<Integer>() {  // 3 
+        Arrays.sort(a);  // 1 
+        Arrays.sort(a, firstIdx, lastIdx);  // 2 
+        Arrays.sort(b, new Comparator<Integer>() {  // 3 
             @Override
             public int compare(Integer o1, Integer o2) {
                 return o2 - o1;
             }
         });
-        Arrays.sort(b, firstIdx, lastIdx, new Comparator<Integer>() {  // 4 
+        Arrays.sort(b, firstIdx, lastIdx, new Comparator<Integer>() {  // 4 
             @Override
             public int compare(Integer o1, Integer o2) {
                 return o2 - o1;
             }
         });
-        // 由于 Java 8 后有 Lambda 表达式，第三个重载及第四个重载亦可写为 
-        Arrays.sort(b, (x, y) -> {  // 5 
+        // 由于 Java 8 后有 Lambda 表达式，第三个重载及第四个重载亦可写为 
+        Arrays.sort(b, (x, y) -> {  // 5 
             return y - x;
         });
-        Arrays.sort(b, (x, y) -> {  // 6 
+        Arrays.sort(b, (x, y) -> {  // 6 
             return y - x;
         });
     }
@@ -1289,16 +1289,16 @@ public class Main {
     import java.io.PrintWriter;
     import java.util.Arrays;
     import java.util.StringTokenizer;
-    
+    
     public class Main {
         static class FastReader {
             StringTokenizer st;
             BufferedReader br;
-    
+    
             public FastReader() {
                 br = new BufferedReader(new InputStreamReader(System.in));
             }
-    
+    
             String next() {
                 while (st == null || !st.hasMoreElements()) {
                     try {
@@ -1309,19 +1309,19 @@ public class Main {
                 }
                 return st.nextToken();
             }
-    
+    
             int nextInt() {
                 return Integer.parseInt(next());
             }
-    
+    
             long nextLong() {
                 return Long.parseLong(next());
             }
-    
+    
             double nextDouble() {
                 return Double.parseDouble(next());
             }
-    
+    
             String nextLine() {
                 String str = "";
                 try {
@@ -1332,10 +1332,10 @@ public class Main {
                 return str;
             }
         }
-    
+    
         static PrintWriter out = new PrintWriter(System.out);
         static FastReader in = new FastReader();
-    
+    
         static void solve() {
             int n = in.nextInt();
             Integer a[] = new Integer[n + 10];
@@ -1356,7 +1356,7 @@ public class Main {
             }
             out.println("NO");
         }
-    
+    
         public static void main(String[] args) {
             int t = in.nextInt();
             while (t-- > 0) {
@@ -1383,8 +1383,8 @@ public class Main {
     static int key;
 
     public static void main(String[] args) {
-        Arrays.binarySearch(a, key);  // 1 
-        Arrays.binarySearch(a, firstIdx, lastIdx, key);  // 2 
+        Arrays.binarySearch(a, key);  // 1 
+        Arrays.binarySearch(a, firstIdx, lastIdx, key);  // 2 
     }
 }
 ```
@@ -1478,19 +1478,19 @@ public class Main {
     static void A() {
         Double a = 0.0;
         Double b = -0.0;
-        out.println(a.equals(b));  // false 
+        out.println(a.equals(b));  // false 
     }
 
     static void B() {
         Double a = 0.0;
         Double b = -0.0 + 0.0;
-        out.println(a.equals(b));  // true 
+        out.println(a.equals(b));  // true 
     }
 
     static void C() {
         double a = 0.0;
         double b = -0.0;
-        out.println(a == b);  // true 
+        out.println(a == b);  // true 
     }
 
 
