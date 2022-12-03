@@ -1,4 +1,4 @@
-## 定义
+## 简介
 
 ![ST 表示意图](images/st.svg)
 
@@ -52,16 +52,8 @@ ST 表基于 [倍增](../basic/binary-lifting.md) 思想，可以做到 $\Theta(
 
 [ST 表模板题](https://www.luogu.com.cn/problem/P3865)
 
-### C 风格模板
-
 ```cpp
 --8<-- "docs/ds/code/sparse-table/sparse-table_1.cpp"
-```
-
-### C++ 风格模板
-
-```cpp
---8<-- "docs/ds/code/sparse-table/sparse-table_2.hpp"
 ```
 
 ## 注意点

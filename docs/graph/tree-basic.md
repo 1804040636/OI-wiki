@@ -1,8 +1,4 @@
-## 引入
-
 图论中的树和现实生活中的树长得一样，只不过我们习惯于处理问题的时候把树根放到上方来考虑。这种数据结构看起来像是一个倒挂的树，因此得名。
-
-## 定义
 
 一个没有固定根结点的树称为 **无根树**（unrooted tree）。无根树有几种等价的形式化定义：
 
@@ -110,15 +106,11 @@ OIers 所说的“满二叉树”多指完美二叉树。
 
 ### 左孩子右兄弟表示法
 
-#### 过程
-
 对于有根树，存在一种简单的表示方法。
 
 首先，给每个结点的所有子结点任意确定一个顺序。
 
 此后为每个结点记录两个值：其 **第一个子结点**  `child[u]` 和其 **下一个兄弟结点**  `sib[u]`。若没有子结点，则 `child[u]` 为空；若该结点是其父结点的最后一个子结点，则 `sib[u]` 为空。
-
-#### 实现
 
 遍历一个结点的所有子结点可由如下方式实现。
 
@@ -146,13 +138,12 @@ for (int v = child[u]; v != EMPTY_NODE; v = sib[v]) {
 
 需要记录每个结点的左右子结点。
 
-???+note "实现"
-    ```cpp
-    int parent[N];
-    int lch[N], rch[N];
-    // -- or --
-    int child[N][2];
-    ```
+```cpp
+int parent[N];
+int lch[N], rch[N];
+// -- or --
+int child[N][2];
+```
 
 ## 树的遍历
 
@@ -170,16 +161,15 @@ for (int v = child[u]; v != EMPTY_NODE; v = sib[v]) {
 
 按照 **根，左，右** 的顺序遍历二叉树。
 
-???+note "实现"
-    ```c++
-    void preTrav(BiTree* root) {
-      if (root) {
-        cout << root->key << " ";
-        preTrav(root->left);
-        preTrav(root->right);
-      }
-    }
-    ```
+```c++
+void preTrav(BiTree* root) {
+  if (root) {
+    cout << root->key << " ";
+    preTrav(root->left);
+    preTrav(root->right);
+  }
+}
+```
 
 #### 中序遍历
 
@@ -187,16 +177,15 @@ for (int v = child[u]; v != EMPTY_NODE; v = sib[v]) {
 
 按照 **左，根，右** 的顺序遍历二叉树。
 
-???+note "实现"
-    ```c++
-    void midTrav(BiTree* root) {
-      if (root) {
-        midTrav(root->left);
-        cout << root->key << " ";
-        midTrav(root->right);
-      }
-    }
-    ```
+```c++
+void midTrav(BiTree* root) {
+  if (root) {
+    midTrav(root->left);
+    cout << root->key << " ";
+    midTrav(root->right);
+  }
+}
+```
 
 #### 后序遍历
 
@@ -204,16 +193,15 @@ for (int v = child[u]; v != EMPTY_NODE; v = sib[v]) {
 
 按照 **左，右，根** 的顺序遍历二叉树。
 
-???+note "实现"
-    ```c++
-    void lastTrav(BiTree* root) {
-      if (root) {
-        lastTrav(root->left);
-        lastTrav(root->right);
-        cout << root->key << " ";
-      }
-    }
-    ```
+```c++
+void lastTrav(BiTree* root) {
+  if (root) {
+    lastTrav(root->left);
+    lastTrav(root->right);
+    cout << root->key << " ";
+  }
+}
+```
 
 #### 反推
 
@@ -233,13 +221,9 @@ BFS 过程中也可以顺便求出各个节点的深度和父亲节点。
 
 ### 无根树
 
-#### 过程
-
 树的遍历一般为深度优先遍历，这个过程中最需要注意的是避免重复访问结点。
 
 由于树是无环图，因此只需记录当前结点是由哪个结点访问而来，此后进入除该结点外的所有相邻结点，即可避免重复访问。
-
-#### 实现
 
 ```cpp
 void dfs(int u, int from) {

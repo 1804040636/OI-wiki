@@ -1,15 +1,10 @@
 author: Marcythm, Xeonacid
 
-## 定义
-
-从此种筛法的思想方法来说，其又被称为「Extended Eratosthenes Sieve」。
-
 由于其由 [Min_25](http://min-25.hatenablog.com/) 发明并最早开始使用，故称「Min_25 筛」。
 
-## 性质
+> 从此种筛法的思想方法来说，其又被称为「Extended Eratosthenes Sieve」。
 
-其可以在 $O\left(\frac{n^{\frac{3}{4}}}{\log{n}}\right)$ 或 $\Theta\left(n^{1 - \epsilon}\right)$ 的时间复杂度下解决一类 **积性函数** 的前缀和问题。
-
+其可以在 $O\left(\frac{n^{\frac{3}{4}}}{\log{n}}\right)$ 或 $\Theta\left(n^{1 - \epsilon}\right)$ 的时间复杂度下解决一类 **积性函数** 的前缀和问题。  
 要求：$f(p)$ 是一个关于 $p$ 的项数较少的多项式或可以快速求值；$f(p^{c})$ 可以快速求值。
 
 ## 记号
@@ -22,7 +17,7 @@ author: Marcythm, Xeonacid
 - $F_{\mathrm{prime}}(n) := \sum_{2 \le p \le n} f(p)$
 - $F_{k}(n) := \sum_{i = 2}^{n} [p_{k} \le \operatorname{lpf}(i)] f(i)$
 
-## 解释
+## 具体方法
 
 观察 $F_{k}(n)$ 的定义，可以发现答案即为 $F_{1}(n) + f(1) = F_{1}(n) + 1$。
 
@@ -101,7 +96,7 @@ $$
 
 这样，就可以使用两个大小为 $O(\sqrt{n})$ 的数组记录所有有效值的 $\text{id}$ 并 $O(1)$ 查询。在计算 $F_{k}$ 或 $F_{\mathrm{prime}}$ 时，使用有效值的 $\text{id}$ 代替有效值作为下标，即可将空间复杂度优化至 $O(\sqrt{n})$。
 
-## 过程
+## 有关代码实现
 
 对于 $F_{k}(n)$ 的计算，我们实现时一般选择实现难度较低的第一种方法，其在数据规模较小时往往比第二种方法的表现要好；
 

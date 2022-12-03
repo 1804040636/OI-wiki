@@ -14,9 +14,7 @@ $\sigma(x)=\sum_{i \mid n} i$
 
 $\varphi(x)=\sum_{i=1}^x 1[\gcd(x,i)=1]$
 
-设 $x = \prod \limits_{i=1} ^ {k} p_i ^ {\alpha_i}$，$p_i$ 为质数，
-
-$\mu(x)=\begin{cases}1&\ x=1 \\(-1)^k& \ \forall \alpha_i =  1 \\0 &\ \max\{\alpha_i\}>1\end{cases}$
+$\mu(x)=\begin{cases}1&\ x=1 \\(-1)^k& \ \prod_{i=1}^k q_i=1\\0 &\ \max\{q_i\}>1\end{cases}$
 
 积性函数有如下性质：
 
@@ -45,11 +43,9 @@ $h(x)=\sum_{d \mid x} f(d)g(\frac x d)$
 对于任意一个数论函数 $g$，必满足
 
 $$
-\begin{aligned}
-\sum_{i=1}^{n}\sum_{d \mid i}g(d)f\left(\frac{i}{d}\right)&=\sum_{i=1}^{n}g(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)\\
+\sum_{i=1}^{n}\sum_{d \mid i}g(d)f\left(\frac{i}{d}\right)=\sum_{i=1}^{n}g(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)\\
 \iff
-\sum_{i=1}^{n}(f\ast g)(i)&=\sum_{i=1}^{n}g(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)
-\end{aligned}
+\sum_{i=1}^{n}(f\ast g)(i)=\sum_{i=1}^{n}g(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)
 $$
 
 略证：
@@ -112,7 +108,7 @@ $=\sum_{d=1}^n \mu(d) {\lfloor \frac n d \rfloor}^2$
 
 #### 使用杜教筛求解
 
-求 $S(n)=\sum_{i=1}^n\varphi(i)$.
+求 $S(i)=\sum_{i=1}^n\varphi(i)$.
 
 同样的，$\varphi\ast 1=ID$
 

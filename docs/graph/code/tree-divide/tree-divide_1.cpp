@@ -9,7 +9,7 @@ int n, m, a, b, c, q[maxn], rt, siz[maxn], maxx[maxn], dist[maxn];
 int cur, h[maxn], nxt[maxn], p[maxn], w[maxn];
 bool tf[10000010], ret[maxn], vis[maxn];
 
-void add_edge(int x, int y, int z) {
+void add_edge(int x, int y, int z) {  // 建图
   cur++;
   nxt[cur] = h[x];
   h[x] = cur;
@@ -19,7 +19,7 @@ void add_edge(int x, int y, int z) {
 
 int sum;
 
-void calcsiz(int x, int fa) {
+void calcsiz(int x, int fa) {  // 这里是两个计算答案的
   siz[x] = 1;
   maxx[x] = 0;
   for (int j = h[x]; j; j = nxt[j])
@@ -43,7 +43,7 @@ void calcdist(int x, int fa) {
 
 queue<int> tag;
 
-void dfz(int x, int fa) {
+void dfz(int x, int fa) {  // 点分治具体
   tf[0] = true;
   tag.push(0);
   vis[x] = true;
@@ -58,7 +58,7 @@ void dfz(int x, int fa) {
         if (dd[k] < 10000010) tag.push(dd[k]), tf[dd[k]] = true;
       cnt = 0;
     }
-  while (!tag.empty()) tf[tag.front()] = false, tag.pop();
+  while (!tag.empty()) tf[tag.front()] = false, tag.pop();  // 底下递归处理
   for (int j = h[x]; j; j = nxt[j])
     if (p[j] != fa && !vis[p[j]]) {
       sum = siz[p[j]];

@@ -130,7 +130,6 @@ bool cmp1(char* s, int len, int p) {
     if (s[i] < t[p]) return true;
     if (s[i] > t[p]) return false;
   }
-  return false;
 }
 
 int query(int rt, char* s, int len) {

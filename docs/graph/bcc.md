@@ -26,28 +26,25 @@
 
 DFS 的代码如下：
 
-???+note "实现"
-    ```cpp
-    // C++ Version
-    void DFS(int p) {
-      visited[p] = true;
-      for (int to : edge[p])
-        if (!visited[to]) DFS(to);
-    }
-    ```
-    
-    ```python
-    # Python Version
-    def DFS(p):
-        visited[p] = True
-        for to in edge[p]:
-            if visited[to] == False:
-                DFS(to)
-    ```
+```cpp
+// C++ Version
+void DFS(int p) {
+  visited[p] = true;
+  for (int to : edge[p])
+    if (!visited[to]) DFS(to);
+}
+```
 
-## 过程
+```python
+# Python Version
+def DFS(p):
+    visited[p] = True
+    for to in edge[p]:
+        if visited[to] == False:
+            DFS(to)
+```
 
-### DFS 找桥并判断边双连通
+## DFS 找桥并判断边双连通
 
 首先，对原图进行 DFS。
 
@@ -63,7 +60,7 @@ DFS 的代码如下：
 
 用以上的方法 $O(n+m)$ 求出每条边分别是否是桥后，两个点是边双连通的，当且仅当它们的树上路径中 **不** 包含桥。
 
-### DFS 找割点并判断点双连通
+## DFS 找割点并判断点双连通
 
 ![bcc-2.png](./images/bcc-2.svg)
 

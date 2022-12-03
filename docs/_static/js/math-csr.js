@@ -1,5 +1,0 @@
-MathJax = {
-  chtml: {
-    matchFontHeight: false
-  }
-};
