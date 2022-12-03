@@ -24,7 +24,8 @@ struct treearray {
   }
 } ta;
 
-struct data {
+//因为github最近的c++标准升级为了17，所以修改了data变量名为data1
+struct data1 {
   int val;
   int del;
   int ans;
@@ -33,11 +34,11 @@ struct data {
 int rv[100010];
 ll res;
 
-bool cmp1(const data& a, const data& b) {
+bool cmp1(const data1& a, const data1& b) {
   return a.val < b.val;
 }  // 重写两个比较
 
-bool cmp2(const data& a, const data& b) { return a.del < b.del; }
+bool cmp2(const data1& a, const data1& b) { return a.del < b.del; }
 
 void solve(int l, int r) {  // 底下是具体的式子，套用
   if (r - l == 1) {
