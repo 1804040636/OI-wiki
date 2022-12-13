@@ -24,7 +24,7 @@ struct treearray {
   }
 } ta;
 
-struct data1 {
+struct data_ {
   int val;
   int del;
   int ans;
@@ -33,11 +33,11 @@ struct data1 {
 int rv[100010];
 ll res;
 
-bool cmp1(const data1& a, const data1& b) {
+bool cmp1(const data_& a, const data_& b) {
   return a.val < b.val;
 }  // 重写两个比较
 
-bool cmp2(const data1& a, const data1& b) { return a.del < b.del; }
+bool cmp2(const data_& a, const data_& b) { return a.del < b.del; }
 
 void solve(int l, int r) {  // 底下是具体的式子，套用
   if (r - l == 1) {

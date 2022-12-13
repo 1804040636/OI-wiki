@@ -2,7 +2,7 @@
 using namespace std;
 
 int head[2000020], tot;
-long long n, size1[1000010], dep[1000010], f[1000010];
+long long n, sz[1000010], dep[1000010], f[1000010];
 
 struct node {
   int to, next;
@@ -14,13 +14,13 @@ void add(int u, int v) {  // 建图
 }
 
 void dfs(int u, int fa) {  // 预处理dfs
-  size1[u] = 1;
+  sz[u] = 1;
   dep[u] = dep[fa] + 1;
   for (int i = head[u]; i; i = e[i].next) {
     int v = e[i].to;
     if (v != fa) {
       dfs(v, u);
-      size1[u] += size1[v];
+      sz[u] += sz[v];
     }
   }
 }
@@ -29,7 +29,7 @@ void get_ans(int u, int fa) {  // 第二次dfs换根dp
   for (int i = head[u]; i; i = e[i].next) {
     int v = e[i].to;
     if (v != fa) {
-      f[v] = f[u] - size1[v] * 2 + n;
+      f[v] = f[u] - sz[v] * 2 + n;
       get_ans(v, u);
     }
   }
