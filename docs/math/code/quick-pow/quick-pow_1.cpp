@@ -15,7 +15,7 @@ void mult(int x[], int y[])  // 高精度乘法
     }
   }
   memcpy(b, t, sizeof(b));
-  return ;
+  return;
 }
 
 void ksm(int p)  // 快速幂
