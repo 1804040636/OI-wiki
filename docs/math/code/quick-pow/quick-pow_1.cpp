@@ -2,7 +2,7 @@
 using namespace std;
 int a[505], b[505], t[505], i, j;
 
-int mult(int x[], int y[])  // 高精度乘法
+void mult(int x[], int y[])  // 高精度乘法
 {
   memset(t, 0, sizeof(t));
   for (i = 1; i <= x[0]; i++) {
@@ -15,6 +15,7 @@ int mult(int x[], int y[])  // 高精度乘法
     }
   }
   memcpy(b, t, sizeof(b));
+  return ;
 }
 
 void ksm(int p)  // 快速幂
